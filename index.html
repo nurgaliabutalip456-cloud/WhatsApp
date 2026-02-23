@@ -1,0 +1,29 @@
+# WhatsApp
+Simple real-time chat app
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyChat</title>
+</head>
+<body>
+
+<h2>My Chat App</h2>
+
+<input id="message" placeholder="Message">
+<button onclick="sendMessage()">Send</button>
+
+<div id="messages"></div>
+
+<script>
+  const messages = [];
+
+  function sendMessage() {
+    const message = document.getElementById("message").value;
+    messages.push(message);
+    document.getElementById("messages").innerHTML += "<p>" + message + "</p>";
+    document.getElementById("message").value = "";
+  }
+</script>
+
+</body>
+</html>
